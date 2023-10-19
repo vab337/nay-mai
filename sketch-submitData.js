@@ -58,7 +58,8 @@
           Story: textInput.value,
         })
         .then(()=>{
-          alert("Thank you for your story!")
+          showAlert();
+          // alert("Thank you for your story!")
           textInput.value=""; //clear Input
         });
       }
@@ -91,8 +92,10 @@
 const step1 =  document.getElementById('step1');
 const step2 =  document.getElementById('step2');
 const step3 =  document.getElementById('step3');
+const submitAlert = document.getElementById('submitAlert');
 step2.classList.add('notDisplay');
 step3.classList.add('notDisplay');
+submitAlert.classList.add('notDisplay');
 
 
       //storytelling buttons
@@ -106,3 +109,16 @@ step3.classList.add('notDisplay');
         step2.classList.add('notDisplay');
         step3.classList.remove('notDisplay');
       })
+
+
+      document.getElementById('goPrint').addEventListener('click', () => {
+        window.location.href = "getData/index.html";
+        console.log("clicked");
+      })
+
+
+      function showAlert() {
+        submitAlert.classList.remove('notDisplay');
+        step3.classList.add('notDisplay');
+      }
+
