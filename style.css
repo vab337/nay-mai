@@ -1,0 +1,190 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/background.png);
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+@font-face {
+  font-family: Garamondt;
+  src: url(assets/Garamondt-Regular.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(assets/HelveticaNeue-Roman.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(assets/HelveticaNeueBold.ttf);
+  font-weight: bold;
+}
+
+.bodytext {
+  font-family: Helvetica;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+
+button {
+  padding:5px;
+  background-color: black;
+  color:white;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  font-weight: bold;
+  
+}
+
+#container {
+  position: relative;
+  width: 40vw;
+  margin: 0 auto;
+  padding: 2vw;
+
+}
+
+#container > img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+/* #container > .inner {
+  position: relative;
+} */
+
+#textcontainer {
+  position: absolute;
+  width: 60%;
+  height:100%;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#step1 {
+  position: relative;
+  height: 50%;
+  top: 45%; 
+}
+
+#title {
+  position: relative;
+  /* top: 45%;  */
+  font-family: Garamondt;
+  font-size: 4em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#enter {
+  position: relative;
+  margin: 0 auto;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#step2 {
+  position: relative;
+  height: 50%;
+  top: 40%; 
+}
+
+#step2 img {
+  display:block;
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#step2 button {
+  position: relative;
+  margin: 0 auto;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+#step3 {
+  position: relative;
+  height: 50%;
+  width:100%;
+  top: 35%; 
+}
+
+#step3 > * {
+  margin: 10px;
+}
+
+#question {
+
+}
+
+#randomQuestion {
+  position: relative;
+  margin: 0 auto;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#textInput {
+  color: white;
+  background: black; 
+  text-align: center;
+  width: 90%;
+  height: 40%;
+  margin-top: 30px;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#textInput:focus {
+  outline: none;
+}
+
+#submit {
+  position: relative;
+  margin: 0 auto;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.notDisplay {
+  display:none;
+}
+
+.displayItem {
+  display: block;
+}
+
+#submitAlert {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#alertBox {
+  position: relative;
+  margin: 0 auto;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: red;
+}

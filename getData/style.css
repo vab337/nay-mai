@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+
+@font-face {
+  font-family: Garamondt;
+  src: url(assets/Garamondt-Regular.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(assets/HelveticaNeue-Roman.otf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(assets/HelveticaNeueBold.ttf);
+  font-weight: bold;
+}
+
+.bodytext {
+  font-family: Helvetica;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+
+button {
+  padding:5px;
+  background-color: black;
+  color:white;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  font-weight: bold;
+  
+}
+
+.catButton {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('../assets/blue-bag.svg');
+  background-size: cover; /* Scale the image to cover the entire button */
+  border: none; 
+  height: 150px;
+  width: 100px;
+  /* white-space: normal; */
+  vertical-align: middle;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.catButtonPressed {
+  /* background-image: url('../assets/red-bag.svg'); */
+}
+
+
+.notDisplay {
+  display:none;
+}
+
+.displayItem {
+  display: block;
+}

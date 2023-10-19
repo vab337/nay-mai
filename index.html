@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script type="module" src="sketch-submitData.js"> </script> 
+
+  </head>
+
+  <body>
+
+    <div id="container">
+          <img src="assets/red-bag.svg">
+
+          <div id =textcontainer>
+
+      <div id="step1">
+          <div  id="title">the <br> emotional <br> baggage</div>
+          <button id="enter">Enter</button>
+        </div>
+
+      <div id="step2"> 
+          <div class="bodytext">PLEASE NOTE THAT your response
+            is public, and letting out thoughts
+            can be empowering. there's always strength in sharing.</div>
+          <img src="assets/penguin.svg">
+          <button id="start">Let's Start</button>
+      </div>
+      <div id="step3">
+          <div  id="question" class="bodytext"></div>
+          <button id="randomQuestion">Next question</button>
+          <textarea class="inner" id="textInput"></textarea>
+          <button id="submit">Submit</button>
+        </div>
+        </div>
+    </div>
+
+
+    <div id="submitAlert">
+      <div id="alertBox">
+        <button id="goPrint"></button>
+      </div>
+    </div>
+
+  </body>
+</html>
