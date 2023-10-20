@@ -66,16 +66,15 @@
 
 
 
-      const questionArray = ["Is there something from your past that continues to affect you emotionally today?",
-      "Could you share a significant challenge or trauma you've faced and how it's impacted you?",
-      "Have you ever experienced a situation that left you feeling overwhelmed or stuck emotionally?",
-      "Do you notice any recurring patterns or issues in your life that might be tied to past experiences?",
-      "In what ways has your upbringing or childhood influenced the way you handle emotions and relationships?",
-      "Is there something you've kept to yourself that you'd like to discuss or work through?",
-      "Have you struggled to let go of a particular emotion or event from your past?",
-      "Are there any regrets or unresolved feelings that weigh on you and you'd like to address?",
-      "What have been the most significant emotional challenges you've faced, and how have they shaped your outlook on life?",
-      "Is there someone or something from your past with whom you feel you need closure or forgiveness?"
+      const questionArray = ["A lesson learned the hard way", "If you could revisit a moment from your past", 
+      "An advice you would have loved to hear",
+      "Ever bitten a bullet?",
+      "If you could entirely forget something",
+      "Once bitten, twice shy",
+      "Words unsaid",
+      "If you could undo anything",
+      "Broken promises",
+      "I'm super shy super shy"
       ]
 
       const question = document.getElementById("question");

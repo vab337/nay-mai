@@ -52,7 +52,7 @@ button {
   vertical-align: middle;
   word-wrap: break-word;
   cursor: pointer;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 .catButtonPressed {
@@ -66,4 +66,44 @@ button {
 
 .displayItem {
   display: block;
+}
+
+#prompt {
+  font-family: Helvetica;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  background: red;
+  margin-bottom: 50px;
+}
+
+#find {
+  display:none;
+}
+
+#print {
+  position: relative;
+  z-index:99;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-top: 50px;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+#back {
+  position: relative;
+  margin: 0;
+  top: 70%;
+  left: 50%;
+  margin-top: 70px;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.selected {
+  background-image : url('../assets/red-bag.svg');
 }

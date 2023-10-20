@@ -19,7 +19,6 @@ html, body {
   font-weight: bold;
   color:black;
   text-transform: uppercase;
-  font-size: 14px;
   text-align: center;
 }
 
@@ -49,13 +48,16 @@ img {
   top: 0;
   left:0;
   width: 100vw;
-  height: 100vh;
-  background: red;
-  color:white;
+  height: 84vh;
+  overflow:hidden;
+  background: white;
+  color:black;
   font-family: Helvetica;
   font-weight: bold;
   text-transform: uppercase;
   mix-blend-mode:difference;
+  font-size: 18px;
+
 
 }
 

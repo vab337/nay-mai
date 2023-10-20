@@ -53,6 +53,43 @@
         }
 
 
+
+      //load images 
+      function preload(imageUrls, callback) {
+        const images = [];
+        let loadedImages = 0;
+      
+        for (let i = 0; i < imageUrls.length; i++) {
+            const img = new Image();
+            img.src = imageUrls[i];
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === imageUrls.length) {
+                    callback();
+                }
+            };
+            images.push(img);
+        }
+      }
+      
+      
+      // Define the image URLs you want to preload
+      var imageUrls = [];
+      
+      for (var i=1; i<4; i++) { ///////////CHANGEEEE 
+        var imageUrl = "../assets/"+i+".png";
+        imageUrls.push(imageUrl);
+      }
+      
+      
+      // Call the preload function when the website first loads
+      preload(imageUrls, () => {
+        // Once all images are preloaded, you can perform actions
+        // such as displaying the rest of your webpage content.
+        console.log('All images preloaded!');
+      });
+
+
       //get the categories
 
       function getallDataString() {
@@ -96,13 +133,29 @@
 
       let wordsChosen = [];
       let storiesChosen = [];
+      let buttonChosen = [];
 
       //chose words to filter
       function choseWords() {
+
+        console.log(this);
         let btnWord = this.innerHTML;
-        wordsChosen.push(btnWord);
-        console.log(wordsChosen);
-        this.style.backgroundImage = "url('../assets/red-bag.svg')";
+
+        if (this.classList.contains('selected')) {
+          // If the button has the "selected" class, unselect it
+          this.classList.remove('selected');
+          const index = wordsChosen.findIndex(item => item.includes(btnWord));
+             if (index !== -1) {
+              wordsChosen.splice(index, 1);
+              console.log("Chosen words: "+ wordsChosen);
+          }
+        } else {
+          // If the button doesn't have the "selected" class, select it
+          this.classList.add('selected');
+          wordsChosen.push(btnWord);
+          console.log("Chosen words: "+ wordsChosen);
+          this.classList.add('selected');
+        }
       }
 
 
@@ -135,25 +188,23 @@
       findStories();
       // Get the content of the div
       var content = storiesChosen;
+      var randomImg = Math.floor(Math.random()*4);
+      console.log(imageUrls[0]);
     
       // Create a new window for printing
-      var printWindow = window.open('', '', 'width=842, height=595');
+      var printWindow = window.open('', '', 'width=595, height=842');
     
       // Write the content and include a link to an external CSS file
       printWindow.document.open();
       printWindow.document.write('<html><head><title>Print</title>');
       printWindow.document.write('<link rel="stylesheet" type="text/css" href="style-print.css">');
       printWindow.document.write('</head><body>');
-      printWindow.document.write('<div id="textFrame"><img src="../assets/text-frame1.png"></div>');
+      printWindow.document.write('<div id="textFrame"><img src="../assets/'+ imageUrls[randomImg] + '"></div>');
       printWindow.document.write('<div id="maintext">' + content + "</div>");
       printWindow.document.write('</body></html>');
       printWindow.document.close();
-    
       // Print the content in the new window
       printWindow.print();
-    
-      // Close the new window
-      // printWindow.close();
     }
 
       
