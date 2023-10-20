@@ -37,8 +37,9 @@
             dataset.push(childSnapshot.val().Story);
           });
   
-        console.log(dataset);
         entryNum = dataset.length;
+        console.log(dataset + "Entry Num" + entryNum);
+
 
         getallDataString();
         findCategories();
@@ -102,8 +103,6 @@
 
       //chose words to filter
       function choseWords() {
-
-        console.log(this);
         let btnWord = this.innerHTML;
 
         if (this.classList.contains('selected')) {
@@ -135,7 +134,8 @@
         str = str.toLowerCase();
         if (str.includes(" " +word + " ")) {
         storiesChosen.push(dataset[index]);
-        results.innerHTML = removeDuplicates(storiesChosen);
+        console.log("Stories chosen" + storiesChosen);
+        // results.innerHTML = removeDuplicates(storiesChosen);
           }
          });
         });
