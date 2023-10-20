@@ -22,6 +22,10 @@ html, body {
   font-weight: bold;
 }
 
+div {
+  padding: 10px;
+}
+
 .bodytext {
   font-family: Helvetica;
   font-weight: bold;
