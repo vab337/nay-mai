@@ -156,7 +156,7 @@
 
     
       // Create a new window for printing
-      var printWindow = window.open('', '', 'width=630, height=800');
+      var printWindow = window.open('', '', 'width=660, height=830');
     
       // Write the content and include a link to an external CSS file
       printWindow.document.open();
