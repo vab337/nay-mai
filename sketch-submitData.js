@@ -75,7 +75,11 @@
       "Words unsaid",
       "If you could undo anything",
       "Broken promises",
-      "I'm super shy super shy"
+      "I'm super shy super shy",
+      "Làm con gái khó lắm phải không?",
+      "Người con gái bạn thương nhất trên đời",
+      "Nếu được gặp một người con gái bất kì",
+      "Nếu được làm con gái một ngày/mỗi ngày"
       ]
 
       const question = document.getElementById("question");
