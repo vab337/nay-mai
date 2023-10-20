@@ -59,7 +59,7 @@
       //get the categories
 
       function getallDataString() {
-      allDataString = dataset.join(" ").toLowerCase().replace(/[^\w\s]/g, '');
+      allDataString = dataset.join(" ").toLowerCase();
       console.log(allDataString);
       }
 
@@ -68,7 +68,7 @@
       var stringArray = [];
 
       let spliceValues = ["i", ""," ", ".",",","and", "the", "we", "our", "me", "you","they","them","their","us","my","a", "of", "from", "with", "on","under","by","up","down","in","at","to","was","is","had","do","does","go","goes","went",
-      "were","get","got","where","what","when","how","who", "like"];
+      "were","get","got","where","what","when","how","who", "like","i'm","only","this","that","real"];
 
       function findCategories() {
         
@@ -87,9 +87,19 @@
       }
       
 
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          // Swap array[i] and array[j]
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+      
+
       function createCategories() {
         for(var b=0; b<stringArray.length; b++){
         const catBtn = document.createElement("button");
+        shuffleArray(stringArray);
         catBtn.innerHTML = stringArray[b];
         catBtn.classList.add('catButton');
         document.getElementById("catContainer").appendChild(catBtn);
@@ -132,7 +142,7 @@
         dataset.forEach((str, index) => {
         wordsChosen.forEach((word) => {
         str = str.toLowerCase();
-        if (str.includes(" " +word + " ")) {
+        if (str.includes(" "+word+" ")) {
         storiesChosen.push(dataset[index]);
         console.log("Stories chosen" + storiesChosen);
         // results.innerHTML = removeDuplicates(storiesChosen);
@@ -151,8 +161,9 @@
 
     function printDiv() {
       findStories();
+      console.log("Stories chosen" + storiesChosen);
       // Get the content of the div
-      var content = storiesChosen;
+      var content = removeDuplicates(storiesChosen);
 
     
       // Create a new window for printing
@@ -163,7 +174,7 @@
       printWindow.document.write('<html><head><title>Print</title>');
       printWindow.document.write('<link rel="stylesheet" type="text/css" href="style-print.css">');
       printWindow.document.write('</head><body>');
-      printWindow.document.write('<div id="textFrame"><img src="../assets/2.png"></div>');
+      printWindow.document.write('<div id="textFrame"><img src="../assets/9.png"></div>');
       printWindow.document.write('<div id="maintext">' + content + "</div>");
       printWindow.document.write('</body></html>');
       printWindow.document.close();

@@ -39,8 +39,9 @@
             dataset.push(childSnapshot.val());
           });
   
-        console.log(dataset);
         entryNum = dataset.length;
+        console.log(entryNum);
+
         });
       }
   
