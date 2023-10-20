@@ -156,14 +156,14 @@
 
     
       // Create a new window for printing
-      var printWindow = window.open('', '', 'width=650, height=900');
+      var printWindow = window.open('', '', 'width=650, height=890');
     
       // Write the content and include a link to an external CSS file
       printWindow.document.open();
       printWindow.document.write('<html><head><title>Print</title>');
       printWindow.document.write('<link rel="stylesheet" type="text/css" href="style-print.css">');
       printWindow.document.write('</head><body>');
-      printWindow.document.write('<div id="textFrame"><img src="../assets/1.png"></div>');
+      printWindow.document.write('<div id="textFrame"><img src="../assets/2.png"></div>');
       printWindow.document.write('<div id="maintext">' + content + "</div>");
       printWindow.document.write('</body></html>');
       printWindow.document.close();
