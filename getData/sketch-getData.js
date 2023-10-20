@@ -199,7 +199,7 @@
       printWindow.document.write('<html><head><title>Print</title>');
       printWindow.document.write('<link rel="stylesheet" type="text/css" href="style-print.css">');
       printWindow.document.write('</head><body>');
-      printWindow.document.write('<div id="textFrame"><img src="../assets/'+ imageUrls[randomImg] + '"></div>');
+      printWindow.document.write('<div id="textFrame"><img src="../assets/1.png"></div>');
       printWindow.document.write('<div id="maintext">' + content + "</div>");
       printWindow.document.write('</body></html>');
       printWindow.document.close();
