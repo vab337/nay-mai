@@ -192,7 +192,7 @@
       console.log(imageUrls[0]);
     
       // Create a new window for printing
-      var printWindow = window.open('', '', 'width=595, height=800');
+      var printWindow = window.open('', '', 'width=595, height=600');
     
       // Write the content and include a link to an external CSS file
       printWindow.document.open();
