@@ -54,41 +54,6 @@
 
 
 
-      //load images 
-      function preload(imageUrls, callback) {
-        const images = [];
-        let loadedImages = 0;
-      
-        for (let i = 0; i < imageUrls.length; i++) {
-            const img = new Image();
-            img.src = imageUrls[i];
-            img.onload = () => {
-                loadedImages++;
-                if (loadedImages === imageUrls.length) {
-                    callback();
-                }
-            };
-            images.push(img);
-        }
-      }
-      
-      
-      // Define the image URLs you want to preload
-      var imageUrls = [];
-      
-      for (var i=1; i<4; i++) { ///////////CHANGEEEE 
-        var imageUrl = "../assets/"+i+".png";
-        imageUrls.push(imageUrl);
-      }
-      
-      
-      // Call the preload function when the website first loads
-      preload(imageUrls, () => {
-        // Once all images are preloaded, you can perform actions
-        // such as displaying the rest of your webpage content.
-        console.log('All images preloaded!');
-      });
-
 
       //get the categories
 
@@ -188,8 +153,7 @@
       findStories();
       // Get the content of the div
       var content = storiesChosen;
-      var randomImg = Math.floor(Math.random()*4);
-      console.log(imageUrls[0]);
+
     
       // Create a new window for printing
       var printWindow = window.open('', '', 'width=650, height=900');
